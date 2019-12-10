@@ -1,0 +1,11 @@
+<h2>Liste des frameworks</h2>
+<div *ngFor="let t of frameworks">
+    <a [routerLink]="['/allframeworks',t.an,t.side]">
+            <img [src]="t.logo">
+    </a>
+    <span>{{t.nom||uppercase }} </span>
+    <span>id:{{t.id}}</span>
+    <span>annee de paruton:{{t.an}}</span>
+    <span>framework cote {{t.side}}</span>
+
+</div>

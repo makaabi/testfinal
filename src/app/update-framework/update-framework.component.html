@@ -1,0 +1,16 @@
+<h3>Modification framework</h3>
+
+    
+
+<form #f="ngForm" (ngSubmit)="modif(f)" >
+        <label for="nom">Identifient</label>
+        <input type="text" id="id" name="id" pattern="[a-z][0-9][a-z0-9]+"  required  ngModel #id="ngModel"/><br>
+        <input type="radio" name="r1" required value="client" ngModel   #r1="ngModel"/>Cote client
+        <input type="radio"  name="r1" required value="serveur" ngModel  #r2="ngModel"/>Cote Serveur
+        <label for="nom">Annee de parutation</label>
+        <input type="text" id="an" name="an"  required ngModel #an="ngModel"/><br>
+    
+        <br><button type="submit" [disabled]="f.invalid">Modifier</button>
+    
+    </form>
+    
